@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Password generator, gerador de senha" />
+    <title>PASSWORD GENERATOR</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="images/logo.png" class="logo" />
+    <h1 class="text">
+      Instantly generate a random <br />
+      and safe password.
+    </h1>
+
+    <main class="container-input">
+      <span>Password lenght: <span id="value"></span></span>
+      <input
+        id="slider"
+        class="slider"
+        type="range"
+        min="5"
+        max="25"
+        value="15"
+      />
+      <button id="button" class="button-cta" onclick="generatePassword()">
+        Generate
+      </button>
+    </main>
+
+    <div
+      id="container-password"
+      onclick="copyPassword()"
+      class="container-password hide"
+    >
+      <span>Your generated password:</span>
+      <span id="password" class="password"></span>
+      <span class="tooltip">Click to copy. 👆</span>
+    </div>
+
+    <p class="credits">Made by Andre "Dimaz"</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
