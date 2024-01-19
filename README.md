@@ -10,12 +10,16 @@
   - Responsive Design: The web application is designed to work seamlessly on various devices and screen sizes.
 </p>
 
+
+
+
+1. Clone the repository to your local machine:
 ```console
 git clone https://github.com/andredimaz/password-generator.git
 ```
-1. Open the index.html file in your web browser.
-2. Specify the desired password length and character sets using the user interface.
-3. Click the "Generate Password" button to get your secure password.
+2. Open the index.html file in your web browser.
+3. Specify the desired password length and character sets using the user interface.
+4. Click the "Generate Password" button to get your secure password.
 
 
 
