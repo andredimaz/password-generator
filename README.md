@@ -24,7 +24,7 @@ git clone https://github.com/andredimaz/password-generator.git
 <h1 align="center">Project Preview</h1>
 <p align="center">
 <img
-  src="/images/website-preview.gif"
+  src="/images/project-preview.gif"
   title="Project preview">
   </p>
 
