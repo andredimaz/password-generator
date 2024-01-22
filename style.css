@@ -1,3 +1,4 @@
+/* Apply styles to all elements */
 * {
   font-family: sans-serif;
   width: 100%;
@@ -5,10 +6,12 @@
   box-sizing: border-box;
 }
 
+/* Styles for the logo class */
 .logo {
   width: 100px;
 }
 
+/* Styles for the body */
 body {
   background-color: #081926;
   width: 100%;
@@ -19,6 +22,7 @@ body {
   flex-direction: column;
 }
 
+/* Styles for the text class */
 .text {
   font-size: 50px;
   text-align: center;
@@ -26,24 +30,28 @@ body {
   margin-top: 10px;
 }
 
+/* Styles for the container-input class */
 .container-input {
   max-width: 480px;
   margin: 14px 0;
 }
 
+/* Styles for the span element inside container-input */
 .container-input span {
   color: white;
   font-size: 18px;
   margin-left: 5%;
 }
 
+/* Styles for the inputs class */
 .inputs {
   background-color: #00a3e92c;
-  height: 100px;
+  height: 205px;
   border-radius: 10px;
   margin-top: 5%;
 }
 
+/* Styles for the slider */
 .slider {
   -webkit-appearance: none;
   width: 300px;
@@ -56,6 +64,7 @@ body {
   margin-right: 1px;
 }
 
+/* Styles for the slider thumb */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 18px;
@@ -67,6 +76,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+/* Hover styles for the slider thumb */
 .slider::-webkit-slider-thumb:hover {
   background: #00a4e9;
   border: 2px solid #fff;
@@ -74,12 +84,13 @@ body {
   height: 21px;
 }
 
+/* Styles for the rangeNumber class */
 .rangeNumber {
   background-color: #00a3e92c;
   border: 1px solid #00a4e9;
   border-radius: 5px;
   width: 15%;
-  height: 40%;
+  height: 30%;
   font-size: 20px;
   color: white;
   text-align: center;
@@ -87,6 +98,7 @@ body {
   margin-left: 30px;
 }
 
+/* Styles for the inner spin button of rangeNumber */
 .rangeNumber::-webkit-inner-spin-button {
   -webkit-appearance: none;
   opacity: 1;
@@ -98,6 +110,7 @@ body {
   cursor: pointer;
 }
 
+/* Hover styles for the inner spin button of rangeNumber */
 .rangeNumber::-webkit-inner-spin-button:hover {
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20viewBox%3D%220%200%2050%2067%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20stroke-width%3D%222%22%3E%3Cline%20x1%3D%221%22%20x2%3D%2250%22%20y1%3D%2233.5%22%20y2%3D%2233.5%22%20stroke%3D%22%23D8D8D8%22%2F%3E%3Cpolyline%20transform%3D%22translate(25%2020)%20rotate(45)%20translate(-25%20-20)%22%20points%3D%2219%2026%2019%2014%2032%2014%22%20stroke%3D%22%23000%22%2F%3E%3Cpolyline%20transform%3D%22translate(25%2045)%20rotate(225)%20translate(-25%20-45)%22%20points%3D%2219%2052%2019%2039%2032%2039%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
   background-position: center right;
@@ -107,10 +120,12 @@ body {
   -webkit-transition: all 0.2s ease-in-out;
 }
 
+/* Styles for the value class */
 .value {
   visibility: hidden;
 }
 
+/* Styles for the button-cta class */
 .button-cta {
   transition: all 0.2s ease-in-out;
   margin-top: 5%;
@@ -130,6 +145,7 @@ body {
   -moz-transition: all 0.2s ease-in;
 }
 
+/* Hover styles for the button-cta class */
 .button-cta:hover {
   background: rgb(61, 255, 71);
   box-shadow: 0 0 15px 1px rgba(0, 236, 12, 0.815);
@@ -139,6 +155,7 @@ body {
   cursor: pointer;
 }
 
+/* Styles for a pseudo-element before .button-cta */
 .button-cta::before {
   content: "";
   display: block;
@@ -157,12 +174,14 @@ body {
   transform: skewX(-20deg);
 }
 
+/* Hover effect for the pseudo-element before .button-cta */
 .button-cta:hover:before {
   -webkit-animation: fade-in-fade-out 0.5s 0s linear;
   -moz-animation: fade-in-fade-out 0.5s 0s linear;
   animation: fade-in-fade-out 0.5s 0s linear;
 }
 
+/* Keyframes for the fade-in-fade-out animation */
 @keyframes fade-in-fade-out {
   from {
     opacity: 0;
@@ -179,6 +198,7 @@ body {
   }
 }
 
+/* Keyframes for the fade-in animation */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -189,6 +209,7 @@ body {
   }
 }
 
+/* Styles for the active state of .button-cta */
 .button-cta:active {
   box-shadow: 0 0 0 0 transparent;
   -webkit-transition: box-shadow 0.2s ease-in;
@@ -196,6 +217,7 @@ body {
   transition: box-shadow 0.2s ease-in;
 }
 
+/* Keyframes for the slide-in animation */
 @keyframes slide-in {
   from {
     transform: translateY(-80%);
@@ -205,6 +227,7 @@ body {
   }
 }
 
+/* Styles for the .container-password class */
 .container-password {
   max-width: 500px;
   margin: 14px;
@@ -215,17 +238,20 @@ body {
   animation: slide-in 1000ms;
 }
 
+/* Styles for the .hide class */
 .hide {
   display: none;
 }
 
+/* Styles for the spans inside .container-password */
 .container-password span {
   color: white;
   margin-bottom: 1px;
   text-align: center;
-  animation: sh02;
+  animation: sh02; /* Animation not defined in provided code */
 }
 
+/* Styles for the .logo class */
 .logo {
   text-align: center;
   color: white;
@@ -234,6 +260,7 @@ body {
   margin-bottom: 8px;
 }
 
+/* Styles for the .password class */
 .password {
   height: 60px;
   background-color: rgba(0, 0, 0, 0.103);
@@ -248,10 +275,12 @@ body {
   transition: transform 0.5s;
 }
 
+/* Hover effect for the .password class */
 .password:hover {
   transform: scale(1.05);
 }
 
+/* Styles for the .tooltip class */
 .tooltip {
   color: white;
   position: relative;
@@ -266,6 +295,7 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
+/* Hover effect for the .tooltip when .container-password is hovered */
 .container-password:hover .tooltip {
   visibility: visible;
   bottom: 50px;
@@ -273,12 +303,14 @@ body {
   animation: slide-in 1000ms;
 }
 
+/* Styles for the .credits class */
 .credits {
   text-align: center;
   color: white;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
+/* Styles for the .btn class */
 .btn {
   display: grid;
   place-items: center;
@@ -290,9 +322,10 @@ body {
   border: 1px solid rgba(0, 0, 0, 0);
   cursor: pointer;
   transition: transform 0.5s;
-  margin-top: 2%;
+  margin-top: 1%;
 }
 
+/* Button hover effect */
 .btn:hover {
   background: #00a4e9;
   box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
@@ -303,15 +336,18 @@ body {
   transform: translateY(0.5em);
 }
 
+/* Button SVG transition */
 .btn svg {
   transition: transform 0.5s;
 }
 
+/* Button SVG hover effect */
 .btn:hover svg {
   transform: scale(0.9);
   fill: #000000;
 }
 
+/* Styles for custom shape dividers on the top */
 .custom-shape-divider-top-1705747858 {
   position: absolute;
   top: 0;
@@ -332,6 +368,7 @@ body {
   fill: #003263;
 }
 
+/* Styles for custom shape dividers on the bottom */
 .custom-shape-divider-bottom-1705748003 {
   position: absolute;
   bottom: 0;
@@ -352,4 +389,179 @@ body {
 
 .custom-shape-divider-bottom-1705748003 .shape-fill {
   fill: #003263;
+}
+
+/* Checkbox styles for symbols */
+.checkbox-symbols input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-symbols .terms-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 7%;
+  margin-top: 4%;
+}
+
+.checkbox-symbols .terms-label .label-text {
+  margin-left: 10px;
+}
+
+.checkbox-symbols .checkbox-svg {
+  width: 30px;
+  height: 30px;
+}
+
+.checkbox-symbols .checkbox-box {
+  fill: #081926;
+  stroke: #00a4e9;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-symbols .checkbox-tick {
+  stroke: #00a4e9;
+  stroke-dasharray: 172;
+  stroke-dashoffset: 172;
+  transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-symbols input[type="checkbox"]:checked + .terms-label .checkbox-box,
+.checkbox-symbols input[type="checkbox"]:checked + .terms-label .checkbox-tick {
+  stroke-dashoffset: 0;
+}
+/* Checkbox styles for lowercase letters */
+.checkbox-lowercase input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-lowercase .terms-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 7%;
+  margin-top: 4%;
+}
+
+.checkbox-lowercase .terms-label .label-text {
+  margin-left: 10px;
+}
+
+.checkbox-lowercase .checkbox-svg {
+  width: 30px;
+  height: 30px;
+}
+
+.checkbox-lowercase .checkbox-box {
+  fill: #081926;
+  stroke: #00a4e9;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-lowercase .checkbox-tick {
+  stroke: #00a4e9;
+  stroke-dasharray: 172;
+  stroke-dashoffset: 172;
+  transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-lowercase input[type="checkbox"]:checked + .terms-label .checkbox-box,
+.checkbox-lowercase
+  input[type="checkbox"]:checked
+  + .terms-label
+  .checkbox-tick {
+  stroke-dashoffset: 0;
+}
+
+/* Checkbox styles for uppercase letters */
+.checkbox-uppercase input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-uppercase .terms-label {
+  cursor: pointer;
+  display: flex;
+  align-items: right;
+  margin-left: 55%;
+  margin-top: -78px;
+  align-items: center;
+}
+
+.checkbox-uppercase .terms-label .label-text {
+  margin-left: 10px;
+}
+
+.checkbox-uppercase .checkbox-svg {
+  width: 30px;
+  height: 30px;
+}
+
+.checkbox-uppercase .checkbox-box {
+  fill: #081926;
+  stroke: #00a4e9;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-uppercase .checkbox-tick {
+  stroke: #00a4e9;
+  stroke-dasharray: 172;
+  stroke-dashoffset: 172;
+  transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-uppercase input[type="checkbox"]:checked + .terms-label .checkbox-box,
+.checkbox-uppercase
+  input[type="checkbox"]:checked
+  + .terms-label
+  .checkbox-tick {
+  stroke-dashoffset: 0;
+}
+
+/* Checkbox styles for numbers */
+.checkbox-numbers input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-numbers .terms-label {
+  cursor: pointer;
+  display: flex;
+  align-items: right;
+  margin-left: 55%;
+  margin-top: 4%;
+  align-items: center;
+}
+
+.checkbox-numbers .terms-label .label-text {
+  margin-left: 10px;
+}
+
+.checkbox-numbers .checkbox-svg {
+  width: 30px;
+  height: 30px;
+}
+
+.checkbox-numbers .checkbox-box {
+  fill: #081926;
+  stroke: #00a4e9;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-numbers .checkbox-tick {
+  stroke: #00a4e9;
+  stroke-dasharray: 172;
+  stroke-dashoffset: 172;
+  transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-numbers input[type="checkbox"]:checked + .terms-label .checkbox-box,
+.checkbox-numbers input[type="checkbox"]:checked + .terms-label .checkbox-tick {
+  stroke-dashoffset: 0;
 }

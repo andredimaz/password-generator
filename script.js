@@ -8,17 +8,20 @@ let password = document.querySelector("#password");
 
 let containerPassword = document.querySelector("#container-password");
 
+let symbolsCheckbox = document.querySelector("#terms-checkbox-symbols");
+let lowercaseCheckbox = document.querySelector("#terms-checkbox-lowercase");
+let uppercaseCheckbox = document.querySelector("#terms-checkbox-uppercase");
+let numbersCheckbox = document.querySelector("#terms-checkbox-numbers");
+
 // Character set for generating passwords
 let charset =
   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}|:";
 
 // Object defining character types based on the charset
-let charTypes = {
-  lowercase: charset.match(/[a-z]/g),
-  uppercase: charset.match(/[A-Z]/g),
-  numbers: charset.match(/[0-9]/g),
-  symbols: charset.match(/[^a-zA-Z0-9]/g),
-};
+let char_symbols = charset.match(/[^a-zA-Z0-9]/g);
+let char_lowercase = charset.match(/[a-z]/g);
+let char_uppercase = charset.match(/[A-Z]/g);
+let char_numbers = charset.match(/[0-9]/g);
 
 // Variable to store the generated password
 let newPassword = "";
@@ -40,9 +43,41 @@ sliderElement.oninput = function () {
 // Function to generate a random password
 function generatePassword() {
   let pass = "";
+  if (
+    !symbolsCheckbox.checked &&
+    !lowercaseCheckbox.checked &&
+    !uppercaseCheckbox.checked &&
+    !numbersCheckbox.checked
+  ) {
+    Swal.fire({
+      title: "Error",
+      html: "Unable to generate a password. <br> Please select at least one character type.",
+      icon: "error",
+      confirmButtonText: "OK",
+    });
+  } else {
+    for (let i = 0, n = sizePassword.innerHTML; i < n; ++i) {
+      let selectedCharset = "";
 
-  for (let i = 0, n = charset.length; i < sizePassword.innerHTML; ++i) {
-    pass += charset.charAt(Math.floor(Math.random() * n));
+      if (symbolsCheckbox.checked) {
+        selectedCharset += char_symbols.join("");
+      }
+      if (lowercaseCheckbox.checked) {
+        selectedCharset += char_lowercase.join("");
+      }
+      if (uppercaseCheckbox.checked) {
+        selectedCharset += char_uppercase.join("");
+      }
+      if (numbersCheckbox.checked) {
+        selectedCharset += char_numbers.join("");
+      }
+
+      if (selectedCharset.length > 0) {
+        pass += selectedCharset.charAt(
+          Math.floor(Math.random() * selectedCharset.length)
+        );
+      }
+    }
   }
 
   console.log(pass);
